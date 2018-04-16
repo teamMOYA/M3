@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="vistaFormConsultes" prefHeight="540.0" prefWidth="900.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m3.uf6.examens.ConsultesController">
+   <center>
+      <AnchorPane>
+         <children>
+            <Label styleClass="title" text="Consultes" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+            <GridPane hgap="10.0" prefWidth="849.0" vgap="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="200.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
+              </rowConstraints>
+               <children>
+                  <Label text="1. Examens ordenats per total d'estudiants descendent. Mostrar examen + total d'estudiants" />
+                  <Button fx:id="btnRunQuery1" mnemonicParsing="false" onAction="#runQuery1" text="Run" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <Label fx:id="lblTitolQuery" styleClass="totals" text="---" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="120.0" />
+            <HBox layoutX="727.0" layoutY="120.0" spacing="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="120.0">
+               <children>
+                  <Label styleClass="totals" text="Registres:" />
+                  <Label fx:id="lblTotalCount" styleClass="totals" text="--" />
+               </children>
+            </HBox>
+            <VBox alignment="TOP_CENTER" layoutX="20.0" layoutY="150.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="150.0">
+               <children>
+                  <TableView fx:id="taulaResultats" prefHeight="500.0" VBox.vgrow="ALWAYS" />
+                  <HBox VBox.vgrow="NEVER">
+                     <children>
+                        <HBox HBox.hgrow="ALWAYS" />
+                        <Pagination id="pagControl" fx:id="pagControl" maxPageIndicatorCount="5" HBox.hgrow="NEVER" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" styleClass="preview" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="450.0">
+              <content>
+                <AnchorPane styleClass="preview">
+                     <children>
+                        <Label fx:id="lblResultats" text="Resultats">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

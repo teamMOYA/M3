@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="vistaTaulaExamens" prefHeight="540.0" prefWidth="900.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m3.uf6.examens.ExamensController">
+   <center>
+		<AnchorPane styleClass="centerregion">
+			<children>
+				<Label layoutX="62.0" layoutY="14.0" styleClass="title" text="Examens" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+				<TableView fx:id="examensTable" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+					<columns>
+						<TableColumn fx:id="colModul" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Modul" />
+						<TableColumn fx:id="colUnitat" editable="false" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" styleClass="col-center" text="Unitat Formativa" />
+						<TableColumn fx:id="colPreguntes" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" styleClass="col-center" text="Preguntes" />
+						<TableColumn fx:id="colPuntuacio" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" styleClass="col-center" text="Puntuacio" />
+                  <TableColumn fx:id="colEditar" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" styleClass="col-center" />
+                  <TableColumn fx:id="colAvaluar" prefWidth="75.0" styleClass="col-center" />
+                  <TableColumn fx:id="colEsborrar" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" styleClass="col-center" />
+					</columns>
+				</TableView>
+			</children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+		</AnchorPane>
+   </center>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</BorderPane>
