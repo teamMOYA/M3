@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="400.0" stylesheets="@application.css" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="m3.uf6.examens.EdicioExamenController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="456.0" minWidth="10.0" prefWidth="194.0" />
+    <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="456.0" minWidth="10.0" prefWidth="196.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints vgrow="SOMETIMES" />
+    <RowConstraints vgrow="SOMETIMES" />
+    <RowConstraints vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label styleClass="etiquetes" text="Nova opcio" />
+      <TextField id="txtOpcio" fx:id="txtOpcio" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+      <ListView id="lstOpcions" fx:id="lstOpcions" editable="true" prefHeight="120.0" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+      <HBox spacing="10.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+         <children>
+            <Button id="btnAfegirOpcio" fx:id="btnAfegirOpcio" mnemonicParsing="false" onAction="#afegirOpcioClick" text="Afegir" />
+            <Button id="btnEsborrarOpcio" fx:id="btnEsborrarOpcio" disable="true" mnemonicParsing="false" onAction="#esborrarOpcioClick" text="Esborrar" />
+         </children>
+      </HBox>
+   </children>
+</GridPane>

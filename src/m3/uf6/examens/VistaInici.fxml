@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="vistaInici" hgap="10.0" stylesheets="@application.css" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m3.uf6.examens.MenuController">
+	<columnConstraints>
+		<ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="308.0" minWidth="10.0" prefWidth="298.0" />
+		<ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="69.0" />
+	</columnConstraints>
+	<rowConstraints>
+		<RowConstraints vgrow="ALWAYS" />
+		<RowConstraints vgrow="ALWAYS" />
+      <RowConstraints vgrow="ALWAYS" />
+      <RowConstraints vgrow="ALWAYS" />
+	</rowConstraints>
+    <children>
+        <Label styleClass="totals" text="Unitats Formatives:" />
+    	<TextField fx:id="txtUFS" disable="true" GridPane.columnIndex="1">
+        <styleClass>
+            <String fx:value="control-center" />
+            <String fx:value="totals" />
+        </styleClass></TextField>
+        <Label styleClass="totals" text="Estudiants:" GridPane.rowIndex="3" />
+        <TextField fx:id="txtEstudiants" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <styleClass>
+            <String fx:value="control-center" />
+            <String fx:value="totals" />
+         </styleClass></TextField>
+      <Label styleClass="totals" text="Examens:" GridPane.rowIndex="1" />
+      <TextField fx:id="txtExamens" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <styleClass>
+            <String fx:value="control-center" />
+            <String fx:value="totals" />
+         </styleClass>
+      </TextField>
+	</children>
+</GridPane>
